@@ -1,0 +1,150 @@
+.slider {
+  position: relative;
+  z-index: 4;
+}
+
+.content {
+  background-image: url("/images/bg1.png");
+  background-size: cover;
+  border: 4px solid $white;
+  color: $white;
+  padding: $xxl-size $xl-size;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  h1 {
+    margin: 0;
+    font-size: $font-size-xl;
+  }
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.body {
+  background-color: $white;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  margin-top: $xl-size;
+  text-align: center;
+  color: purple
+}
+.comet {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  opacity: 0.5;
+  z-index: 5;
+}
+
+.comet1 {
+  animation: shoot1 3s infinite linear;
+}
+
+.comet2 {
+  display: none;
+}
+
+.comet3 {
+  animation: shoot3 3s infinite linear;
+  animation-delay: 2s;
+}
+
+.comet4 {
+  animation: shoot4 2s infinite linear;
+  animation-delay: 2s;
+}
+
+.comet5 {
+  animation: shoot5 3s infinite linear;
+  animation-delay: 3s;
+}
+
+.comet6 {
+  animation: shoot6 3s infinite linear;
+  animation-delay: 4s;
+}
+
+@keyframes shoot1 {
+  0% {
+    transform: translate(0);
+  }
+  95% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-80vw, 100vh);
+    opacity: 0;
+  }
+}
+
+// @keyframes shoot2 {
+//     0% {
+//         transform: translate(-20vw, 0);
+//     }
+//     95% {
+//         opacity: 0.6;
+//     }
+//     100% {
+//         transform: translate(-100vw, 100vh);
+//         opacity: 0;
+//     }
+// }
+
+@keyframes shoot3 {
+  0% {
+    transform: translate(-40vw, 0);
+  }
+  95% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-120vw, 100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes shoot4 {
+  0% {
+    transform: translate(30vw, 0);
+  }
+  100% {
+    transform: translate(-40vw, 100vh);
+  }
+}
+
+@keyframes shoot5 {
+  0% {
+    transform: translate(-60vw, 0);
+  }
+  100% {
+    transform: translate(-120vw, 60vh);
+  }
+}
+
+@keyframes shoot6 {
+  0% {
+    transform: translate(-60vw, 0);
+  }
+  100% {
+    transform: translate(-120vw, 60vh);
+  }
+}
+
+@media only screen and (max-width: $desktop-breakpoint),
+  screen and (max-height: $mobile-portrait),
+  screen and (max-width: $tablet-breakpoint) and (min-height: $tablet-breakpoint) {
+  .content {
+    max-width: $mobile-maxWidth;
+    h1 {
+        font-size: $font-size-m;
+    }
+    p {
+        display: none;
+    }
+  }
+}
