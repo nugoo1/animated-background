@@ -87,9 +87,6 @@ export default function IndexPage() {
           <Img fixed={data.comet6.childImageSharp.fixed} />
         </span>
       </div>
-      <section className="body">
-        <h1>Yes We do</h1>
-      </section>
     </div>
   )
 }
